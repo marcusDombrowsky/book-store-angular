@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ChangePasswordsComponent } from './components/change-passwords/change-passwords.component';
+import { AuthComponent } from './auth.component';
+import {RouterOutlet} from "@angular/router";
+import { AuthRoutingModule } from './auth-routing.module';
 
 
 
@@ -10,10 +13,13 @@ import { ChangePasswordsComponent } from './components/change-passwords/change-p
   declarations: [
     LoginComponent,
     SignupComponent,
-    ChangePasswordsComponent
+    ChangePasswordsComponent,
+    AuthComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterOutlet,
+    AuthRoutingModule
   ]
 })
 export class AuthModule { }
